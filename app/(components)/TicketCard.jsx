@@ -12,10 +12,10 @@ function TicketCard() {
         iusto accusamus sit pariatur sequi vitae itaque excepturi, enim quas.
       </p>
       <div className="flex items-center-justify-start space-x-2 text-xs">
-        <h1 className="bg-danger-second text-danger-main rounded-full font-medium uppercase px-1.5 border border-danger-border">
+        <h1 className="bg-danger-second text-danger-main rounded-full font-medium uppercase px-1.5 py-0.5 border border-danger-border">
           urgent
         </h1>
-        <h1 className="bg-gray-100 text-gray-900 rounded-full px-1.5 border border-gray-500">
+        <h1 className="bg-gray-100 text-gray-900 rounded-full px-1.5  py-0.5 border border-gray-500">
           #564546
         </h1>
       </div>

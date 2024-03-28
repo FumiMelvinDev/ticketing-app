@@ -9,7 +9,7 @@ export default function Home() {
           New Ticket
         </button>
       </div>
-      <div className="py-6 flex flex-col space-y-4">
+      <div className="py-6 md:grid grid-cols-1 lg:grid-cols-2 gap-4">
         <TicketCard />
         <TicketCard />
         <TicketCard />
