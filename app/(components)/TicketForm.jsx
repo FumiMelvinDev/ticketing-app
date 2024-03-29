@@ -63,6 +63,7 @@ function TicketForm() {
       throw new Error("failed to add a new ticket");
     }
 
+    router.refresh();
     router.push("/");
     setFormData({
       title: "",
@@ -74,7 +75,7 @@ function TicketForm() {
   return (
     <form className="w-full md:px-16 px-8 py-6" onSubmit={handleSubmit}>
       <div className="space-y-6">
-        <div className="border-b border-gray-900/10 pb-6">
+        <div className="border-b border-gray-900/10 pb-10">
           <h2 className=" font-semibold leading-7 text-gray-800 text-lg py-6">
             New Ticket
           </h2>
@@ -210,7 +211,7 @@ function TicketForm() {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-end gap-x-6">
+      <div className="mt-10 flex items-center justify-end gap-x-6">
         <button
           type="button"
           onClick={() => router.push("/")}
