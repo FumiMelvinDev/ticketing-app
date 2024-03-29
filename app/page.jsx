@@ -1,7 +1,21 @@
 import Link from "next/link";
 import TicketCard from "./(components)/TicketCard";
 
-export default function Home() {
+const getTickets = async () => {
+  try {
+    const res = await fetch("http://localhost:3000/api/Tickets", {
+      cache: "no-store",
+    });
+
+    return res.json();
+  } catch (error) {
+    console.log("Failed to fetch", error);
+  }
+};
+
+export default async function Home() {
+  const { tickets } = await getTickets();
+
   return (
     <main className="w-full md:px-16 px-8 py-6">
       <div className="flex items-center justify-between">
@@ -14,9 +28,10 @@ export default function Home() {
         </Link>
       </div>
       <div className="py-6 md:grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <TicketCard />
-        <TicketCard />
-        <TicketCard />
+        {tickets &&
+          tickets?.map((ticket) => (
+            <TicketCard key={ticket._id} ticket={ticket} />
+          ))}
       </div>
     </main>
   );

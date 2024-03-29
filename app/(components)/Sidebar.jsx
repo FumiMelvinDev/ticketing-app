@@ -30,7 +30,10 @@ function classNames(...classes) {
 
 export default function Sidebar() {
   return (
-    <Disclosure as="nav" className="bg-gray-0 border-r-2 h-screen">
+    <Disclosure
+      as="nav"
+      className="bg-gray-0 border-r-2 h-screen fixed top-0 left-0"
+    >
       {({ open }) => (
         <>
           <div className="max:w-60 sm:w-60 px-2">

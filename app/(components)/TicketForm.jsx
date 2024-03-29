@@ -51,7 +51,7 @@ function TicketForm() {
       description: description,
       priority: selected.name,
     };
-    const res = await fetch("/api", {
+    const res = await fetch("/api/Tickets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,9 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex">
+      <body className="flex space-x-16 sm:space-x-60">
         <Sidebar />
-        {children}
+        <div className="flex-1 overflow-y-auto">{children}</div>
       </body>
     </html>
   );
