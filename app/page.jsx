@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TicketCard from "./(components)/TicketCard";
 
 export default function Home() {
@@ -5,9 +6,12 @@ export default function Home() {
     <main className="w-full md:px-16 px-8 py-6">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl sm:text-4xl font-medium">Tickets</h1>
-        <button className="bg-primary-main text-primary-second font-medium px-4 py-1 rounded-lg border-2 border-primary-border">
+        <Link
+          href={"/Ticket/new"}
+          className="bg-primary-main text-primary-second font-medium px-4 py-1 rounded-lg border-2 border-primary-border"
+        >
           New Ticket
-        </button>
+        </Link>
       </div>
       <div className="py-6 md:grid grid-cols-1 lg:grid-cols-2 gap-4">
         <TicketCard />
