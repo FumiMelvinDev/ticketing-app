@@ -12,3 +12,15 @@ export async function DELETE(req, { params }) {
     return NextResponse.json({ message: "An error occured" }, { status: 500 });
   }
 }
+
+export async function GET() {
+  try {
+    const { id } = params;
+
+    const ticket = await Ticket.findOne(id);
+
+    return NextResponse.json({ ticket }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "An error occured" }, { status: 500 });
+  }
+}

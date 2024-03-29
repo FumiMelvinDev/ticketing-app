@@ -39,8 +39,8 @@ export default function Sidebar() {
           <div className="max:w-60 sm:w-60 px-2">
             <div className="relative flex flex-col h-16 items-stretch justify-between">
               <div className="flex flex-col items-stretch">
-                <div className="mx-auto pb-10 pt-6">Logo</div>
-                <div className="flex flex-col space-y-4">
+                {/* <div className="mx-auto pb-10 pt-6">Logo</div> */}
+                <div className="flex flex-col space-y-4 pt-20">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
