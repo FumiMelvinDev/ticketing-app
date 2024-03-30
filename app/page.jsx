@@ -1,15 +1,17 @@
 import Link from "next/link";
 import TicketCard from "./(components)/TicketCard";
 
-export const runtime = "edge";
-
 const getTickets = async () => {
   try {
     const res = await fetch(process.env.URL + "/api/Tickets", {
       cache: "no-store",
     });
 
-    return res.json();
+    if (res.ok) {
+      return res.json();
+    }
+
+    return [];
   } catch (error) {
     console.log("Failed to fetch", error);
   }
